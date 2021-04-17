@@ -2,7 +2,16 @@
 
 Git hook scripts are useful for identifying simple issues before submission to code review
 
-**Note:** This is
+**Note:** this is an example repository containing the following pre-commit hooks:
+* pylint (configured)
+* unit tests (just one used for example)
+* check-yaml
+* end-of-file-fixer
+* trailing-whitespace
+* black
+* flake8 (not configured)
+
+The hooks are executed on the delta between the repository and master.
 
 # Installation
 
@@ -32,3 +41,8 @@ pip install pre-commit
 ```bash
 pre-commit run --all-files
 ```
+
+
+## References
+
+[pre-commit](https://pre-commit.com/)
