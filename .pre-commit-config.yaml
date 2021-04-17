@@ -13,3 +13,4 @@ repos:
           ]
         # disabled plugins: pylint.extensions.mccabe
         exclude: test*
+        log_file: .cache/pylint.log
