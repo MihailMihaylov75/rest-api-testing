@@ -1,0 +1,17 @@
+repos:
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        args:
+          [
+            "-rn",
+            "-sn",
+            "--rcfile=pylintrc",
+            "--load-plugins=pylint.extensions.docparams",
+          ]
+        # disabled plugins: pylint.extensions.mccabe
+        exclude: tests/functional/|tests/input|tests/extensions/data|tests/regrtest_data/|tests/data/|doc/
