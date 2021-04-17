@@ -1,5 +1,5 @@
 repos:
-  - repo: https://github.com/MihailMihaylov75/rest-api-testing
+  - repo: local
     hooks:
       - id: pylint
         name: pylint
@@ -14,4 +14,4 @@ repos:
             "--load-plugins=pylint.extensions.docparams",
           ]
         # disabled plugins: pylint.extensions.mccabe
-        exclude: tests/functional/|tests/input|tests/extensions/data|tests/regrtest_data/|tests/data/|doc/
+        exclude: test*
