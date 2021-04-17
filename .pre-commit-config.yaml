@@ -14,6 +14,14 @@ repos:
         # disabled plugins: pylint.extensions.mccabe
         exclude: test*
         log_file: .cache/pylint.log
+      - id: tests
+        name: Run unittests
+        entry: python -m unittest
+        language: system
+        types: [ python ]
+        args: [tests/test_app.py]
+        log_file: .cache/unittests.log
+        stages: [commit] # better is to be on push
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.3.0
     hooks:
