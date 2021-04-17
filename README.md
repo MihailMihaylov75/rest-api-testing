@@ -42,6 +42,10 @@ pip install pre-commit
 pre-commit run --all-files
 ```
 
+To run individual hooks use:
+```bash
+pre-commit run <hook_id>
+```
 
 ## References
 
