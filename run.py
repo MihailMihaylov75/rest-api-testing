@@ -1,4 +1,4 @@
-"""Run the app."""
+"""Module that run init db."""
 from app import app
 from db import db
 
@@ -7,5 +7,5 @@ db.init_app(app)
 
 @app.before_first_request
 def create_tables():
-    """create tables."""
+    """Create tables."""
     db.create_all()

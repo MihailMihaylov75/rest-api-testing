@@ -14,3 +14,17 @@ repos:
         # disabled plugins: pylint.extensions.mccabe
         exclude: test*
         log_file: .cache/pylint.log
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+      - id: check-yaml
+        log_file: .cache/check-yaml.log
+      - id: end-of-file-fixer
+        log_file: .cache/end-of-file-fixer.log
+      - id: trailing-whitespace
+        log_file: .cache/trailing-whitespace.log
+  - repo: https://github.com/psf/black
+    rev: 19.3b0
+    hooks:
+      - id: black
+        log_file: .cache/black.log
