@@ -28,3 +28,8 @@ repos:
     hooks:
       - id: black
         log_file: .cache/black.log
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 3.9.0
+    hooks:
+      - id: flake8
+        additional_dependencies: [ flake8-bugbear ]

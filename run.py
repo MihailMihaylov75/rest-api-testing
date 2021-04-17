@@ -1,4 +1,4 @@
-"""Module that run init db."""
+"""Module that run init db and create needed tables."""
 from app import app
 from db import db
 
