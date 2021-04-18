@@ -4,20 +4,32 @@ from tests.test_base import TestBase
 
 
 class TestItem(TestBase):
-    def test_crud(self):
-        with self.app.app_context():
-            item = ItemModel("test", 19.99, 1)
+    def test_create_item(self):
+        item = ItemModel("test", 19.99, 1)
 
-            self.assertIsNone(
-                ItemModel.find_by_name("test"),
-                "Found an item with name {}, but expected not to.".format(item.name),
-            )
+        self.assertEqual(
+            item.name,
+            "test",
+            "The name of the item after creation does not equal the constructor argument.",
+        )
+        self.assertEqual(
+            item.price,
+            19.99,
+            "The price of the item after creation does not equal the constructor argument.",
+        )
+        self.assertEqual(item.store_id, 1)
 
-            item.save_to_db()
+    def test_item_json(self):
+        item = ItemModel("test", 19.99, 1)
+        expected = {"name": "test", "price": 19.99}
 
-            self.assertIsNotNone(ItemModel.find_by_name("test"))
-
-            item.delete_from_db()
+        self.assertEqual(
+            item.json(),
+            expected,
+            "The JSON export of the item is incorrect. Received {}, expected {}.".format(
+                item.json(), expected
+            ),
+        )
 
 
 if __name__ == "__main__":
