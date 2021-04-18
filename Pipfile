@@ -16,6 +16,7 @@ pylint = "==3.0.0a1"
 setuptools = "==56.0.0"
 coverage = "*"
 mypy = "==0.812"
+pylint-flask-sqlalchemy = "==0.2.0"
 
 [requires]
 python_version = "3.8"
