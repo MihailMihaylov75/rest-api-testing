@@ -15,6 +15,7 @@ pre-commit = "2.12.1"
 pylint = "==3.0.0a1"
 setuptools = "==56.0.0"
 coverage = "*"
+mypy = "==0.812"
 
 [requires]
 python_version = "3.8"
