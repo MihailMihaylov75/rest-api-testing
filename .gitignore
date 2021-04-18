@@ -132,3 +132,6 @@ dmypy.json
 
 # Merge tools
 *.orig
+
+# databese
+*.db
