@@ -19,7 +19,10 @@ repos:
         entry: python -m unittest
         language: system
         types: [ python ]
-        args: [tests/unit/test_app.py, tests/unit/test_item.py]
+        args: [tests/unit/test_app.py,
+               tests/unit/test_item.py,
+               tests/integration/test_item.py,
+        ]
         log_file: .cache/unittests.log
         stages: [commit] # better is to be on push
   - repo: https://github.com/pre-commit/pre-commit-hooks
